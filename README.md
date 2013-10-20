@@ -1,7 +1,10 @@
 family-tree-chart
 =================
 
-Example - This chart is shown from clicking "Father's side" or "Mother's side" on familymain.php from www.kcorina.com.
+chart.php
+=========
+
+Example - This chart is shown from clicking "Father's side" or "Mother's side" on www.kcorina.com/familymain.php.
 
 This code builds the family tree chart of my ancestors. Initially the leftmost box would be my father or mother,
 depending on which button the user pressed on the familymain.php. The page will show my mother's or father's parents,
@@ -27,3 +30,34 @@ deathdate	/  date		  /    Death Date
 deathplace /	varchar(100) /	Place of Death	 	 
 fatherid	/  int(11)	 	 /   index of current person's father 	 
 motherid	/  int(11)	 	 /   index of current person's mother 	 
+
+personinfo.php
+==============
+
+Someone has clicked a box in chart.php to get more information on the person whose name is in that box. A new page will
+display this person's marriage, wife's name, siblings, parents and documents (if any). The user can click on any name to
+get more information on them as well. If document is selected, it will pop-up on the page.
+
+MySQL tables
+
+1) person - see under chart.php
+
+2) marriage 
+
+Column / Type	/ Description
+id /	int(10)	 / Primary Key	 	 
+husbandid	/ int(11) / index of husband on person table	 	 
+date /	date / date of wedding 	 	 
+place	/ varchar(100) / lacation of wedding 	 	 
+wifeid /	int(11)	 / index of wife on person table 	 
+divorcedate /	date / date of divorce
+
+3) document
+
+Column / Type	/ Description
+id	/ int(10)	/ Primary Key 	 	 
+personid	/ int(11)	/ index of current person on person table	 	 
+record	/ mediumblob	/ image of document 	 	 
+title	/ varchar(100) / document title (birth record, census record, etc.)	 	 
+description	/ text / description of document
+
