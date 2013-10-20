@@ -686,7 +686,7 @@ h5 a:hover {
       }
 ?>
 
-<h5><a href="../familymain.php">Family Tree Home</a></h5>
+<h5><a href="familymain.php">Family Tree Home</a></h5>
 <h1 align="center"><font face="Palatino Linotype, Book Antiqua, Palatino, serif"><b>My Family Tree (<?php echo $side; ?>'s side)</b></font></h1>
 <h2 align="center"><font face="Palatino Linotype, Book Antiqua, Palatino, serif"><b>Click on a box for more information on that person: Parents, Siblings, Marriages, Documents</b></font></h2>
 <ul id="boxes">
